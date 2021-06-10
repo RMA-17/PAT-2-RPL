@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.pat2rpl.R;
+
 public class IsiActivity extends AppCompatActivity {
 
     @Override

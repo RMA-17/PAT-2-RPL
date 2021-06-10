@@ -1,8 +1,10 @@
-package com.example.pat2rpl;
+package com.example.pat2rpl.isiApp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.pat2rpl.R;
 
 public class DetailActivity extends AppCompatActivity {
 
