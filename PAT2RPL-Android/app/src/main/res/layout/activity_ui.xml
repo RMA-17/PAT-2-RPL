@@ -9,7 +9,6 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:id="@+id/judul"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 

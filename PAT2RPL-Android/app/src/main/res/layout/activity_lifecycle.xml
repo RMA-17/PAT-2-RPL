@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/apa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    android:orientation="vertical"
+    tools:context=".Lifecycle.lifecycleActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:text="Apa? ini hanya untuk ngetes saja, kembaililah!"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_marginTop="50pt"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/kembali"
+        android:layout_marginTop="250dp"
+        android:layout_width="match_parent"
+        android:text="Kembali"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

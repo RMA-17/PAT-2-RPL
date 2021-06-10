@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PAT2RPL">
-        <activity android:name=".UIApp.YuAiActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"> </activity>
+        <activity android:name=".Lifecycle.lifecycleActivity"></activity>
+        <activity
+            android:name=".UIApp.YuAiActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".isiApp.IsiActivity" />
         <activity android:name=".isiApp.DetailActivity" />
         <activity android:name=".RootActivity">

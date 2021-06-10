@@ -10,6 +10,8 @@
 
     <TextView
         android:layout_width="match_parent"
+        android:id="@+id/title"
+        android:fontFamily="sans-serif-black"
         android:text="Pilih App"
         android:gravity="center"
         android:layout_marginTop="40dp"
@@ -29,6 +31,14 @@
         android:layout_width="match_parent"
         android:layout_marginTop="20dp"
         android:text="UI"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/lifecycle"
+        android:textAllCaps="false"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginTop="20dp"
+        android:text="Lifecycle"
         android:layout_height="wrap_content"/>
 
 
