@@ -1,8 +1,8 @@
 package project.raka.m.a;
 
-public class Main {
+public class MainProgram {
 
     public static void main(String[] args) {
-	// write your code here
+
     }
 }
