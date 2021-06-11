@@ -21,7 +21,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_marginTop="100dp"
-        android:text="Aplikasi Biodata"
+        android:text="Intent"
         android:textAllCaps="false"
         android:backgroundTint="#D11717"
         android:id="@+id/Biodata_btn"
