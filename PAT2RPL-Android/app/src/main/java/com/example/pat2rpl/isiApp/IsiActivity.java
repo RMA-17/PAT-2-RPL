@@ -44,15 +44,28 @@ public class IsiActivity extends AppCompatActivity {
                 alamat = Alamat.getText().toString();
                 nomorT = NoTelp.getText().toString();
 
-                Intent abc = new Intent(IsiActivity.this, DetailActivity.class);
-                Bundle send = new Bundle();
-                send.putString("NAMA", nama_lengkap);
-                send.putString("UMUR", umur);
-                send.putString("ALAMAT", alamat);
-                send.putString("NOT", nomorT);
-                abc.putExtras(send);
-                startActivity(abc);
-
+                if (nama_lengkap.equals("")){
+                    Nama.requestFocus();
+                    Nama.setError("Nama belum diisi");
+                } else if (umur.equals("")){
+                    Umur.requestFocus();
+                    Umur.setError("Umurnya isi dulu dong bosku");
+                } else if (alamat.equals("")){
+                    Alamat.requestFocus();
+                    Alamat.setError("Alamatmu dimana?");
+                } else if (nomorT.equals("")){
+                    NoTelp.requestFocus();
+                    NoTelp.setError("Minta telepon nya!!!");
+                } else {
+                    Intent abc = new Intent(IsiActivity.this, DetailActivity.class);
+                    Bundle send = new Bundle();
+                    send.putString("NAMA", nama_lengkap);
+                    send.putString("UMUR", umur);
+                    send.putString("ALAMAT", alamat);
+                    send.putString("NOT", nomorT);
+                    abc.putExtras(send);
+                    startActivity(abc);
+                }
             }
         });
 
