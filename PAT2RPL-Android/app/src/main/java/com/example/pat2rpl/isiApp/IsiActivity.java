@@ -1,12 +1,16 @@
 package com.example.pat2rpl.isiApp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.VpnService;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.pat2rpl.R;
 import com.example.pat2rpl.RootActivity;
@@ -32,7 +36,8 @@ public class IsiActivity extends AppCompatActivity {
         btnBack = findViewById(R.id.tombol_back);
         btnSend = findViewById(R.id.tombol_send);
 
-        //  String/Penampung
+        //  ALert Dialog
+        final AlertDialog.Builder dialog = new AlertDialog.Builder(this);
 
 
         btnSend.setOnClickListener(new View.OnClickListener() {
@@ -57,14 +62,35 @@ public class IsiActivity extends AppCompatActivity {
                     NoTelp.requestFocus();
                     NoTelp.setError("Minta telepon nya!!!");
                 } else {
-                    Intent abc = new Intent(IsiActivity.this, DetailActivity.class);
-                    Bundle send = new Bundle();
-                    send.putString("NAMA", nama_lengkap);
-                    send.putString("UMUR", umur);
-                    send.putString("ALAMAT", alamat);
-                    send.putString("NOT", nomorT);
-                    abc.putExtras(send);
-                    startActivity(abc);
+
+                    dialog.setTitle("Apakah sudah benar?")
+                            .setMessage("Username: " + nama_lengkap + '\n'
+                            + "Umur: " + umur + '\n'
+                            + "Alamat: " + alamat + '\n'
+                            + "Nomor Telepon: " + nomorT);
+                    dialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent abc = new Intent(IsiActivity.this, DetailActivity.class);
+                            Bundle send = new Bundle();
+                            send.putString("NAMA", nama_lengkap);
+                            send.putString("UMUR", umur);
+                            send.putString("ALAMAT", alamat);
+                            send.putString("NOT", nomorT);
+                            abc.putExtras(send);
+                            startActivity(abc);
+                        }
+                    });
+                    dialog.setNeutralButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Toast.makeText(IsiActivity.this, "Pengirimian dibatalkan", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    AlertDialog show = dialog.create();
+                    show.show();
+
+
                 }
             }
         });
